@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funnel Blueprint · For Nick Schiffer · AG1</title>
+<meta name="description" content="Funnel Blueprint - built for Nick Schiffer by AG1 Consulting.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Funnel Blueprint · For Nick Schiffer">
+<meta property="og:description" content="Part of the funnel audit + less-than-7-day install plan built for @nsbuilders by AG1 Consulting.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script defer data-domain="andrei170.github.io" src="https://plausible.io/js/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-back"><span class="arrow">&larr;</span> Back to Hub</a>
+    <span class="nav-title">For Nick Schiffer · AG1</span>
+  </div>
+</nav>
+
+<article class="doc">
+  <header class="doc-header">
+    <span class="doc-tag">Architecture</span>
+    <h1>Funnel Blueprint - Nick Schiffer</h1>
+  </header>
+
+  
+<p><strong>Architecture deliverable</strong> · Full funnel diagram, phase mapping, tech stack, integration points.</p>
+<hr />
+<h2>Funnel Diagram (top to bottom)</h2>
+<pre><code>ENTRY POINTS
+├── @nsbuilders IG (237K) ─────────────────────────────┐
+├── YouTube @NSBuilders (long-form build content) ──────┤
+├── Modern Craftsman podcast (episode CTAs) ────────────┤
+├── nsbuilders.com (education CTA added) ──────────────┤
+└── Cold ads (Phase 4) - Meta + YouTube ────────────────┘
+                              ↓
+                    LINKTREE / BIO ROUTER
+                              ↓
+          ┌──── CUSTOM BUILDER'S OPERATIONS SCORECARD ──┐
+          │     (ScoreApp / Typeform · 8q · 4 min)       │
+          │     Captures email + segments                │
+          └────────────────────┬────────────────────────┘
+                               ↓
+                      ┌────────┴────────┐
+                      ↓                 ↓
+              Score 71-100         Score 0-70
+              (Mastermind-ready)   (Course / Foundations pool)
+                      ↓                 ↓
+              MASTERMIND APPLY     8-TOUCH SEGMENTED NURTURE
+              (Modern Craftsman    (Welcome flow, 10 days)
+               Mastermind app)             ↓
+                                 CUSTOM BUILDER'S PLAYBOOK
+                                 ($497 standard / $997 with biz review)
+                                          ↓
+                                 COURSE BUYER NURTURE
+                                 (Implementation accountability)
+                                          ↓
+                                 QUALIFIED MASTERMIND APPLICANT
+                                 (6-12 months downstream)
+                                          ↓
+                               MODERN CRAFTSMAN MASTERMIND
+                               ($2,500-$5,000/yr group cohort)
+
+PARALLEL TRACK
+PODCAST LISTENERS → Modern Craftsman Mastermind direct application
+                    (highest-trust, highest-LTV segment of the audience)
+                    → cohort fills quarterly, compounding with each episode
+</code></pre>
+<h2>Phase Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Phase</th>
+<th>Owner</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Builder's Playbook landing page</td>
+<td>1</td>
+<td>AG1</td>
+<td>Webflow / custom HTML</td>
+</tr>
+<tr>
+<td>VSL hero asset</td>
+<td>1</td>
+<td>AG1 + Nick</td>
+<td>Wistia + Riverside</td>
+</tr>
+<tr>
+<td>Stripe + payment + email auto-trigger</td>
+<td>1</td>
+<td>AG1</td>
+<td>Stripe + Kit / Kajabi</td>
+</tr>
+<tr>
+<td>Pixel + GA4 + retargeting tags</td>
+<td>1</td>
+<td>AG1</td>
+<td>Meta Pixel + GA4 + GTM</td>
+</tr>
+<tr>
+<td>Custom Builder's Operations Scorecard quiz</td>
+<td>2</td>
+<td>AG1</td>
+<td>ScoreApp or Typeform</td>
+</tr>
+<tr>
+<td>8-touch nurture sequence</td>
+<td>2</td>
+<td>AG1</td>
+<td>Kit / ConvertKit (or Kajabi)</td>
+</tr>
+<tr>
+<td>Bio link router</td>
+<td>2</td>
+<td>AG1</td>
+<td>Linktree (Pro) or Beacons</td>
+</tr>
+<tr>
+<td>10-day welcome flow</td>
+<td>2</td>
+<td>AG1</td>
+<td>Kit / ConvertKit</td>
+</tr>
+<tr>
+<td>nsbuilders.com education CTA update</td>
+<td>2</td>
+<td>AG1 + Nick</td>
+<td>Site update</td>
+</tr>
+<tr>
+<td>Photoshoot + B-roll</td>
+<td>3</td>
+<td>AG1 + photographer</td>
+<td>Job site + studio</td>
+</tr>
+<tr>
+<td>Hook bank + content calendar</td>
+<td>3</td>
+<td>AG1 + Nick</td>
+<td>Notion + Frame.io</td>
+</tr>
+<tr>
+<td>Podcast CTA integration (mid-roll + end-roll)</td>
+<td>3</td>
+<td>AG1 + Nick</td>
+<td>Podcast hosting update</td>
+</tr>
+<tr>
+<td>Meta + YouTube ads</td>
+<td>4</td>
+<td>AG1</td>
+<td>Meta Ads Manager + Google Ads</td>
+</tr>
+<tr>
+<td>Retargeting campaigns</td>
+<td>4</td>
+<td>AG1</td>
+<td>Meta + Google + GTM</td>
+</tr>
+<tr>
+<td>Lookalike audiences</td>
+<td>4</td>
+<td>AG1</td>
+<td>Meta CAPI + audience builder</td>
+</tr>
+</tbody>
+</table>
+<h2>Tech Stack (recommended, swappable)</h2>
+<ul>
+<li><strong>CMS / Course host:</strong> Kajabi (preferred - all-in-one) or Teachable</li>
+<li><strong>Landing pages:</strong> Webflow (control) or Kajabi (speed)</li>
+<li><strong>Email:</strong> Kit / ConvertKit (preferred) or Kajabi-native</li>
+<li><strong>Quiz / Scorecard:</strong> ScoreApp (preferred for scoring + segmentation) or Typeform</li>
+<li><strong>Payment:</strong> Stripe (course) + Whop (mastermind / membership if cohort expands)</li>
+<li><strong>Video host:</strong> Wistia (course) + YouTube (long-form) + Loom (1:1 personal video reviews)</li>
+<li><strong>Analytics:</strong> GA4 + Meta Pixel + Microsoft Clarity (heatmaps)</li>
+<li><strong>CRM:</strong> GHL or Kajabi-native</li>
+<li><strong>Community / Mastermind:</strong> Skool (preferred - low overhead) or Circle</li>
+<li><strong>Scheduling:</strong> Calendly (default) or Cal.com</li>
+<li><strong>Project / build:</strong> Notion (handover-friendly) + Linear (engineering)</li>
+</ul>
+<h2>Integration Points</h2>
+<ol>
+<li>Scorecard → Email: ScoreApp triggers Kit on quiz completion with score tag</li>
+<li>Email → Course: Kit triggers Kajabi enrolment on purchase webhook</li>
+<li>Course → Mastermind application: Course graduates routed to mastermind apply form on completion of module 6</li>
+<li>Podcast → Scorecard: episode mid-roll CTA routes listener to scorecard landing</li>
+<li>All events → GA4 + Meta Pixel via GTM: captures full funnel attribution</li>
+<li>CRM → Email: GHL syncs with Kit so 1:1 conversations land in the same record</li>
+</ol>
+<h2>Owner Map</h2>
+<ul>
+<li><strong>Nick:</strong> filming (VSL + photoshoot), podcast mid-roll CTA recording, monthly Q&amp;A sessions on the live course, mastermind facilitation, top-line decisions on copy + brand</li>
+<li><strong>AG1 (Andrei):</strong> everything else - landing page build, email writing, automation setup, content production cycles, ads management, scorecard build, weekly reporting</li>
+</ul>
+<h2>Failure Modes + Mitigations</h2>
+<ul>
+<li><strong>VSL filming delays</strong> → use existing YouTube content as Phase 1 placeholder; replace with custom VSL by end of Phase 1</li>
+<li><strong>Course content creation timeline</strong> → outline modules first, record minimum viable version (60 min per module), add B-roll and polish after launch</li>
+<li><strong>Scorecard over-segmentation</strong> → start with 3 tiers; expand to 5 only after 1,000 quiz completions confirms volume by tier</li>
+<li><strong>Mastermind cohort fill timing</strong> → launch waitlist before the cohort opens; 40-person cap keeps quality of Q&amp;A high</li>
+</ul>
+<h2>KPIs (90-day)</h2>
+<ul>
+<li>Phase 1: Custom Builder's Playbook landing live + 50+ buyers in first 30 days</li>
+<li>Phase 2: 2,000+ scorecard completions + 8-12% IG-to-email conversion</li>
+<li>Phase 3: 40+ short-form posts shipped + podcast CTA integration live</li>
+<li>Phase 4: Meta CPL under $45 + ROAS 3x by week 12</li>
+<li>Year-1 floor target: $300-750K incremental from course + email + mastermind cohort</li>
+</ul>
+
+  <footer class="doc-footer">
+    <a href="index.html" class="doc-footer-link">Back to Hub</a>
+    <div class="doc-meta">Prepared 2026-04-30 &middot; Built for @nsbuilders</div>
+  </footer>
+</article>
+
+</body>
+</html>
